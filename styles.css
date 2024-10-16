@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9fafb;
+}
+
+.calculator {
+    position: relative;
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    /* Make calculator width responsive */
+    max-width: 700px;
+    /* Max width for larger screens */
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 30px;
+}
+
+/* Styles for Price Section */
+.price-group {
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically on small screens */
+    align-items: flex-start;
+    /* Align to start */
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.price-label {
+    color: #555;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+.price-input {
+    width: auto;
+    /* Reset width to auto for better fit */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.edit-price-btn {
+    padding: 10px 14px;
+    background-color: #aeaeaf;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-price-btn:hover {
+    background-color: #656667;
+    /* Darker blue */
+}
+
+/* New styles for Save Price button */
+.save-price-btn {
+    padding: 10px 14px;
+    background-color: #28a745;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.save-price-btn:hover {
+    background-color: #218838;
+    /* Darker green */
+}
+
+/* Styles for Date Section */
+.date-group {
+    display: flex;
+    flex-direction: column;
+    /* Stack date inputs vertically on small screens */
+    align-items: flex-start;
+    /* Align to start */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.start-date-label,
+.end-date-label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.start-date-input,
+.end-date-input {
+    width: 100%;
+    /* Full width for better accessibility */
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Styles for Daily Liters Section */
+.daily-liters-label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.daily-liters-input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Common Input Focus Style */
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Styles for Calculate Button */
+.calculate-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #28a745;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calculate-btn:hover {
+    background-color: #218838;
+}
+
+/* Styles for Result */
+.result {
+    margin-top: 25px;
+    font-size: 22px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .date-group {
+        flex-direction: row;
+        /* Side by side for larger screens */
+        justify-content: space-between;
+        /* Space between */
+    }
+
+    .start-date-input,
+    .end-date-input {
+        width: 30%;
+        /* Reset width for larger screens */
+    }
+
+    .price-group {
+        flex-direction: row;
+        /* Side by side for larger screens */
+    }
+
+    .price-input {
+        width: 60px;
+        /* Restore original width for larger screens */
+    }
+}

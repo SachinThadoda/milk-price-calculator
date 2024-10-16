@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>કેલ્ક્યુલેટર</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <h2>કેલ્ક્યુલેટર</h2>
+
+        <div class="price-group">
+            <label for="price" class="price-label">પ્રતિ શેર ભાવ (₹):</label>
+            <input type="number" id="price" class="price-input" value="35" disabled>
+            <button id="editPriceBtn" class="edit-price-btn" onclick="togglePriceEdit()">કિંમત બદલો</button>
+        </div>
+
+        <div class="date-group">
+            <label for="startDate" class="start-date-label">શરૂઆતની તારીખ:</label>
+            <input type="date" id="startDate" class="start-date-input" required>
+
+            <label for="endDate" class="end-date-label">છેલ્લી તારીખ:</label>
+            <input type="date" id="endDate" class="end-date-input" required>
+        </div>
+
+        <label for="dailyLiters" class="daily-liters-label">દિવસ દીઠ દૂધ (શેર):</label>
+        <input type="number" id="dailyLiters" class="daily-liters-input" placeholder="દૈનિક શેર દાખલ કરો." required>
+
+        <button class="calculate-btn" onclick="calculateTotal()">ગણતરી કરો</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
